@@ -1231,12 +1231,12 @@ CDN:
   # aplayer_css:
   # aplayer_js:
   # meting_js:
-  # meting_api:
+   meting_api: https://api.xiaopangza.cn/meting/?server=:server&type=:type&id=:id&r=:r
   # prismjs_js:
   # prismjs_lineNumber_js:
   # prismjs_autoloader:
-  # artalk_js:
-  # artalk_css:
+   artalk_js: https://artalk.xiaopangza.cn/dist/Artalk.js
+   artalk_css: https://artalk.xiaopangza.cn/dist/Artalk.css
   # pace_js:
   # pace_default_css:
   # countup_js:
