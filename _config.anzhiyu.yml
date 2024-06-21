@@ -196,7 +196,7 @@ post_meta:
 post_copyright:
   enable: true
   decode: false
-  author_href:
+  author_href: /favicon.ico
   location: 乌鲁木齐
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -294,7 +294,7 @@ mainTone:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk
-  use: artalk # Twikoo/Waline
+  use: Artalk # Twikoo/Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -1041,7 +1041,7 @@ comment_barrage_config:
   # token，在控制台中获取
   accessToken: ""
   # 博主邮箱md5值
-  mailMd5: ""
+  mailMd5: "a16a8dacd69591447b74b571d266e442"
 
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
@@ -1061,8 +1061,8 @@ visitorMail:
 # ptool 文章底部工具
 ptool:
   enable: true
-  share_mobile: true
-  share_weibo: true
+  share_mobile: false
+  share_weibo: false
   share_copyurl: true
   categories: true # 是否显示分类
   mode: # 运营模式与责任，不配置不显示
