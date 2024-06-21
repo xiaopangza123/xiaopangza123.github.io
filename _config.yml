@@ -8,8 +8,8 @@ subtitle: ''
 description: ''
 keywords:
 author: 小胖砸
-language: Zh-Han
-timezone: Asia/Shanghai
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -45,7 +45,7 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
@@ -102,3 +102,24 @@ theme: anzhiyu
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+algolia:
+  appId: "xxxx"
+  apiKey: "xxxx"
+  adminApiKey: "xxxx"
+  chunkSize: 5000
+  indexName: "hexo"
+  fields:
+    - content:strip:truncate,0,200
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
+# APlayer
+# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
+aplayer:
+  meting: true
+  asset_inject: false
