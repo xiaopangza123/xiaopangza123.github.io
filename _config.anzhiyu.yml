@@ -348,7 +348,7 @@ twikoo:
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
-  server: https://artalk.xiaopangza.cn/
+  server: https://artalk.xiaopangza.cn
   site: 小胖砸的博客
   visitor: false
   option:
