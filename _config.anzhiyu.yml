@@ -4,20 +4,20 @@ menu:
     分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
 
-  # 友链:
-    # 友人帐: /link/ || anzhiyu-icon-link
-    # 朋友圈: /fcircle/ || anzhiyu-icon-artstation
-    # 留言板: /comments/ || anzhiyu-icon-envelope
+  友链:
+    #     友人帐: /link/ || anzhiyu-icon-link
+    朋友圈: /fcircle/ || anzhiyu-icon-artstation
+    留言板: /comments/ || anzhiyu-icon-envelope
 
-  # 我的:
-    # 音乐馆: /music/ || anzhiyu-icon-music
-    # 追番页: /bangumis/ || anzhiyu-icon-bilibili
-    # 相册集: /album/ || anzhiyu-icon-images
-  #   小空调: /air-conditioner/ || anzhiyu-icon-fan
-
-  # 关于:
-    # 关于本人: /about/ || anzhiyu-icon-paper-plane
-    # 闲言碎语: /essay/ || anzhiyu-icon-lightbulb
+  我的:
+    音乐馆: /music/ || anzhiyu-icon-music
+#    追番页: /bangumis/ || anzhiyu-icon-bilibili
+#    相册集: /album/ || anzhiyu-icon-images
+    小空调: /air-conditioner/ || anzhiyu-icon-fan
+    我的装备: /equipment/ || anzhiyu-icon-dice-d20
+  关于:
+    关于本人: /about/ || anzhiyu-icon-paper-plane
+    闲言碎语: /essay/ || anzhiyu-icon-lightbulb
   #   随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
 
 # nav相关配置
@@ -37,11 +37,6 @@ nav:
         - name: Alist
           link: https://alist.xiaopangza.fun/
           icon: https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg
-    # - title: 项目
-    #   item:
-    #     - name: 安知鱼图床
-    #       link: https://image.anheyu.com/
-    #       icon: https://image.anheyu.com/favicon.ico
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -146,14 +141,14 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /img/siteicon/32.png
+  img: /favicon.ico
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: "background: url(https://www.dmoe.cc/random.php) top / cover no-repeat" # "background: url() top / cover no-repeat"
+index_img: "background: url(https://www.dmoe.cc/random.php) top" # "background: url() top / cover no-repeat"
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: false
@@ -168,7 +163,7 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    # - /img/default_cover.jpg
+    - https://www.dmoe.cc/random.php
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -194,7 +189,7 @@ post_meta:
     categories: true # true or false 文章页是否显示分类
     tags: true # true or false 文章页是否显示标籤
     label: true # true or false 显示描述性文字
-    unread: false # true or false 文章未读功能
+    unread: true # true or false 文章未读功能
 
 # 主色调相关配置
 mainTone:
@@ -305,7 +300,7 @@ noticeOutdate:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: true
+  enable: false
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
@@ -622,7 +617,7 @@ theme_color:
   #   blockquote_background_color: "#425AEF"
   scrollbar_color: "var(--anzhiyu-scrollbar)"
   meta_theme_color_light: "#f7f9fe"
-  meta_theme_color_dark: "#18171d"
+  meta_theme_color_dark: "#f2b94bdd" #"#18171d"
 
 # 移动端侧栏
 sidebar:
@@ -801,8 +796,8 @@ aside:
     category: true
   card_author:
     enable: true
-    description: #<span style="color:#fff">我是一名</span><br><strong style="background-color:#85ffbd;background-image:linear-gradient(45deg,#85ffbd 0,#fffb7d 100%)">Java开发</strong> <strong style="background-color:#fbab7e;background-image:linear-gradient(62deg,#fbab7e 0,#f7ce68 100%)">小趴菜</strong><br><strong style="background-color:#3eecac;background-image:linear-gradient(19deg,#3eecac 0,#ee74e1 100%)">社恐</strong> <strong style="background-color:#fbda61;background-image:linear-gradient(45deg,#fbda61 0,#ff5acd 100%)">ISTP</strong> <strong style="background-color:#f4d03f;background-image:linear-gradient(132deg,#f4d03f 0,#16a085 100%)">熬夜狂</strong><canvas id="canvas" style="width:100%" width="820" height="250"></canvas><script src="https://www.lqbby.com/upload/clock.js"></script>
-      name_link: /
+    description: <span style="color:#fff">我是一名</span><br><strong style="background-color:#85ffbd;background-image:linear-gradient(45deg,#85ffbd 0,#fffb7d 100%)">Java开发</strong>&nbsp;<strong style="background-color:#fbab7e;background-image:linear-gradient(62deg,#fbab7e 0,#f7ce68 100%)">小趴菜</strong><br><strong style="background-color:#3eecac;background-image:linear-gradient(19deg,#3eecac 0,#ee74e1 100%)">社恐</strong>&nbsp;<strong style="background-color:#fbda61;background-image:linear-gradient(45deg,#fbda61 0,#ff5acd 100%)">ISTP</strong>&nbsp;<strong style="background-color:#f4d03f;background-image:linear-gradient(132deg,#f4d03f 0,#16a085 100%)">熬夜狂</strong><canvas id="canvas" style="width:100%" width="820" height="250"></canvas><script src="https://www.lqbby.com/upload/clock.js"></script>
+    name_link: /
 
   card_announcement:
     enable: true
@@ -1043,8 +1038,8 @@ css_prefix: true
 home_top:
   enable: true # 开关
   timemode: date #date/updated
-  title: 我想过一种生活
-  subTitle: 一种不一样的生活。
+  title: 我想过一种
+  subTitle: 不一样的生活。
   siteText: xiaopangza.site
   category:
     - name: 记录
@@ -1065,8 +1060,8 @@ home_top:
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: true
-    swiper_css: /js/swiper.min.js #https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
-    swiper_js: /css/swiper.min.css #https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
+    swiper_css: /js/swiper.min.js  #swiper css依赖
+    swiper_js: /css/swiper.min.css #swiper js依赖
   banner:
     tips: 新品主题
     title: Theme-AnZhiYu
@@ -1138,7 +1133,7 @@ ptool:
   share_mobile: true
   share_weibo: true
   share_copyurl: true
-  categories: false # 是否显示分类
+  categories: true # 是否显示分类
   mode: # 运营模式与责任，不配置不显示
 
 # 欢迎语配置
