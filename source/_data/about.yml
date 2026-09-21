@@ -1,50 +1,48 @@
 - class_name: 关于页
-  subtitle: 生活明朗，万物可爱✨
+  subtitle: 把真实实践整理成可以复用的技术记录
   avatarImg: /favicon.ico
   avatarSkills:
     left:
-      - 🤖️ 数码科技爱好者
-      - 🔍 分享与热心帮助
-#      - 🏠 智能家居小能手
-#      - 🔨 设计开发一条龙
+      - 🤖 AI 智能体实践
+      - 🐧 Linux 与服务器运维
     right:
-#      - 专修交互与设计 🤝
-      - 脚踏实地行动派 🏃
-#      - 团队小组发动机 🧱
-      - 壮汉人狠话不多 💢
+      - ☕ Java 与开发工具
+      - 🗄️ Oracle 与 RAC 维护
   name: 小胖砸
-  description: 记录 AI、Linux、Java、Oracle 与服务器实践的个人技术博主
+  description: 记录 AI、Linux、Java、Oracle 与服务器实践的个人技术博客
   aboutsiteTips:
-    tips: 生活
-    title1: 源自
-    title2: 热爱而去 感受
+    tips: 写作
+    title1: 源于
+    title2: 实践，归于
     word:
-      - 学习
-      - 想象
-      - 发散
-      - 思考
-  helloAbout: Hello there!
+      - 验证
+      - 沉淀
+      - 分享
+      - 复用
+  helloAbout: Hello, world!
   skillsTips:
-    tips: 技能
-    title: 开启创造力
-  careers:
-    tips: 方向
+    tips: 技术栈
     title: 持续学习与构建
+  careers:
+    tips: 内容方向
+    title: 从真实问题出发
     list:
-      - desc: AI 工具与智能体实践
-        color: "#357ef5"
-      - desc: Linux、Java 与服务器技术
-        color: "#357ef5"
+      - desc: AI 工具、Hermes Agent 与自动化
+        color: "#425AEF"
+      - desc: Linux、Docker 与服务器运维
+        color: "#2496ed"
+      - desc: Oracle 数据库与 RAC 实践
+        color: "#f80000"
     img:
   statistic:
-    link: /archives
-    text: 文章隧道
-    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
+    link: /archives/
+    text: 浏览全部文章
+    cover: /img/covers/oracle-archivelog-management.png
   map:
     title: 内容主题
     StrengthenTitle: AI、开发与服务器实践
-    background: https://cos.xiaopangza.cn/img/upload/%E7%99%BD%E5%A4%A9.png
-    backgroundDark: https://cos.xiaopangza.cn/img/upload/%E5%A4%9C%E9%97%B4.png
+    background: /img/covers/connect-hermes-agent-to-intellij-idea-via-acp.png
+    backgroundDark: /img/covers/install-hermes-agent-on-debian13-china.png
   selfInfo:
     selfInfoTips1: 站点
     selfInfoContentYear: Hexo + Halo
@@ -55,52 +53,43 @@
   personalities:
     author_name: 鉴赏家
     personality_type: ISTP
-    photo_url: #https://cos.xiaopangza.cn/img/upload/透明.png
-    personality_img: https://cos.xiaopangza.cn/img/images/MBTI/istp.svg
+    photo_url:
+    personality_img: /img/MBTI/istp.svg
     name_url: https://www.16personalities.com/istp-conclusion
   maxim:
-    maxim_tips: 座右铭
-    maxim_top: 我想过一种，
-    maxim_bottom: 不一样的生活。
+    maxim_tips: 写作原则
+    maxim_top: 先完成真实验证，
+    maxim_bottom: 再沉淀可复用经验。
   buff:
-    buff_tips: 特长
-    buff_top: 平平无奇的 小趴菜
-    buff_bottom: FPS爱好者 GO
+    buff_tips: 擅长
+    buff_top: 系统排障与自动化
+    buff_bottom: 把复杂过程整理清楚
   game:
-    game_tips: 爱好游戏
-    game_title: 反恐精英
-    game_uid: "月下の猫"
-    game_bg: https://cos.xiaopangza.cn/img/upload/header_ctt.png
+    game_tips: 工具偏好
+    game_title: Linux 与开源生态
+    game_uid: "稳定、可控、可复现"
+    game_bg: /img/covers/oracle-rac-whitelist-management.png
   comic:
-    comic_tips: 爱好番剧
-    comic_title: 追番
+    comic_tips: 精选内容
+    comic_title: 技术专题
     comic_list:
-      - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
-      - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
+      - name: Hermes Agent
+        href: /categories/AI-与智能体/
+        cover: /img/covers/connect-hermes-agent-to-intellij-idea-via-acp.png
+      - name: Linux 运维
+        href: /categories/Linux-与运维/
+        cover: /img/covers/install-hermes-agent-on-debian13-china.png
+      - name: Oracle RAC
+        href: /categories/Oracle-数据库/
+        cover: /img/covers/enable-oracle-rac-archivelog.png
   like:
     like_tips: 关注偏好
-    like_title: 数码科技
-    like_bg: https://cos.xiaopangza.cn/img%2Fimages%2FROG.svg
-    like_bottom: 手机、电脑软硬件
+    like_title: 数字基础设施
+    like_bg: /img/covers/oracle-archivelog-management.png
+    like_bottom: 服务器、网络、数据库与智能工具
   music:
-    music_tips: 音乐偏好
-    music_title: 华语流行,纯音乐，Dj
-    music_bg: https://cos.xiaopangza.cn/img%2Fimages%2FPop.webp
-    music_link: /music
+    music_tips: 站内功能
+    music_title: 音乐馆
+    music_bg: /img/home/hero.png
+    music_link: /music/
   reward_list:
-#    - name: 海阔蓝
-#      amount: 8.8
-#      datatime: 2023-03-28

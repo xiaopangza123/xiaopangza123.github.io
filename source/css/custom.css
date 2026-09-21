@@ -1,0 +1,32 @@
+/* Site-specific refinements kept outside the upstream theme. */
+#page-header.full_page {
+  background-position: center 42%;
+}
+
+#page-header.full_page::before {
+  background: linear-gradient(90deg, rgba(8, 18, 38, .82) 0%, rgba(8, 18, 38, .52) 46%, rgba(8, 18, 38, .2) 100%);
+}
+
+#site-info {
+  text-shadow: 0 3px 18px rgba(0, 0, 0, .45);
+}
+
+#site-title,
+#site-subtitle {
+  max-width: min(760px, 88vw);
+}
+
+.recent-post-item .post_cover img,
+.relatedPosts-list img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #page-header.full_page {
+    background-position: 60% center;
+  }
+
+  #page-header.full_page::before {
+    background: linear-gradient(180deg, rgba(8, 18, 38, .46), rgba(8, 18, 38, .76));
+  }
+}

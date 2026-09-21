@@ -1,26 +1,23 @@
-- class_name: 好物
-  description: 实物装备推荐
-  tip: 看看我的装备吧
-  top_background: #https://bu.dusays.com/2023/07/05/64a4c38842b7a.webp
+- class_name: 常用设备
+  description: 日常使用且仍在维护的生产力设备
+  tip: 工具服务于创造，信息保持简洁
+  top_background: /img/home/hero.png
   good_things:
-    - title: 生产力
-      description: 提升自己生产效率的硬件设备
+    - title: 移动设备
+      description: 通讯、记录与日常使用
       equipment_list:
         - name: iPhone 14 Pro
-          specification: 暗夜紫 / 256G
-          description: 4800万主摄&&上岛，唯一缺点大概就是续航不够。
-          image: https://cos.xiaopangza.cn/img/upload/iPhone14Pro.webp
-          link: https://www.apple.com.cn/iphone-14-pro/
+          specification: 256 GB
+          description: 日常主力手机，用于通讯、拍摄与移动办公。
+          image: /img/equipment/iphone.webp
+          link: https://support.apple.com/zh-cn/111849
         - name: AirPods Pro（第二代）
-          specification: 标准版
-          description: 降噪加持，空间音频等功能确实新颖，第一次使用有被惊艳到。
-          image: https://cos.xiaopangza.cn/img/upload/Airpods_pro.png?imageMogr2/format/webp
+          specification: 主动降噪
+          description: 通勤与专注场景使用，兼顾降噪和设备协同。
+          image: /img/equipment/airpods.webp
           link: https://www.apple.com.cn/airpods-pro/
-    - title: 出行
-      description: 用来出行的实物及设备
-      equipment_list:
         - name: Apple Watch Series 8
-          specification: 黑色
-          description: 始终为我的健康放哨，深夜弹出站立提醒，不过确实有效的提高了我的运动频率，配合apple全家桶还是非常棒的产品，缺点依然是续航。
-          image: https://cos.xiaopangza.cn/img/upload/iwatch.webp
-          link: https://www.apple.com.cn/apple-watch-series-8/
+          specification: 运动与健康记录
+          description: 用于运动、健康提醒和日常通知。
+          image: /img/equipment/watch.webp
+          link: https://support.apple.com/zh-cn/111848

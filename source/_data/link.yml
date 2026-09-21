@@ -1,36 +1,27 @@
-- class_name: 框架
+- class_name: 常用入口
   flink_style: flexcard
   hundredSuffix: ""
   link_list:
+    - name: Halo 主博客
+      link: https://blog.xiaopangza.cn/
+      avatar: /img/siteicon/manifest-icon-192.maskable.png
+      descr: 动态内容、互动功能与完整博客体验
+    - name: GitHub
+      link: https://github.com/xiaopangza123
+      avatar: https://github.githubassets.com/favicons/favicon.svg
+      descr: 项目源码与公开仓库
     - name: Hexo
-      link: https://hexo.io/zh-tw/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、简单且强大的网站框架
-    - name: anzhiyu主题
-      link: https://blog.anheyu.com/
-      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
-      descr: 生活明朗，万物可爱
-      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
+      link: https://hexo.io/zh-cn/
+      avatar: https://hexo.io/icon/favicon-196x196.png
+      descr: 快速、简洁且高效的静态博客框架
 
-- class_name: 推荐博客
+- class_name: 主题与社区
   flink_style: telescopic
   hundredSuffix: ""
   link_list:
     - name: 安知鱼
       link: https://blog.anheyu.com/
       avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
-      descr: 生活明朗，万物可爱
-      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
+      descr: Hexo AnZhiYu 主题作者博客
       color: vip
-      tag: 技术
-
-- class_name: 小伙伴
-  class_desc: 那些人，那些事
-  flink_style: anzhiyu
-  hundredSuffix: ""
-  link_list:
-    - name: 安知鱼
-      link: https://blog.anheyu.com/
-      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
-      descr: 生活明朗，万物可爱
-      recommend: true
+      tag: 主题

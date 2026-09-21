@@ -1,59 +1,32 @@
 - class_name: 开启创造力
   creativity_list:
-    - name: Java
-      color: "#fff"
-      icon: https://cos.xiaopangza.cn/img/images/icons/java.jpg?imageMogr2/format/webp/interlace/1
-    - name: JetBrains
-      color: "#fff"
-      icon: https://cos.xiaopangza.cn/img/images/icons/jetbrains.svg
+    - name: Hermes Agent
+      color: "#425AEF"
+      icon: /img/siteicon/manifest-icon-192.maskable.png
+    - name: Linux
+      color: "#f4b942"
+      icon: /img/tech/linux.svg
+    - name: Debian
+      color: "#a80030"
+      icon: /img/tech/debian.svg
     - name: Docker
-      color: "#57b6e6"
-      icon: https://cos.xiaopangza.cn/img/images/icons/Docker.png?imageMogr2/format/webp/interlace/1
-    - name: Node
-      color: "#333"
-      icon: https://cos.xiaopangza.cn/img/images/icons/node-logo.svg
-    - name: Webpack
-      color: "#2e3a41"
-      icon: https://cos.xiaopangza.cn/img/images/icons/Webpack.png?imageMogr2/format/webp/interlace/1
-    - name: Pinia
-      color: "#fff"
-      icon: https://cos.xiaopangza.cn/img/images/icons/pinia-logo.svg
+      color: "#2496ed"
+      icon: /img/tech/docker.svg
+    - name: Java
+      color: "#e76f00"
+      icon: /img/tech/java.svg
     - name: Python
-      color: "#fff"
-      icon: https://cos.xiaopangza.cn/img/images/icons/Python.png?imageMogr2/format/webp/interlace/1
-    - name: Vite
-      color: "#937df7"
-      icon: https://cos.xiaopangza.cn/img/images/icons/vite-logo.svg
-    - name: Flutter
-      color: "#4499e4"
-      icon: https://cos.xiaopangza.cn/img%2Fimages%2Ficons%2FFlutter.png?imageMogr2/format/webp/interlace/1
-    - name: Vue
-      color: "#b8f0ae"
-      icon: https://cos.xiaopangza.cn/img/images/icons/vue.png?imageMogr2/format/webp/interlace/1
-    - name: React
-      color: "#222"
-      icon: https://cos.xiaopangza.cn/img/images/icons/React.svg?imageMogr2/format/webp/interlace/1
-    - name: CSS3
-      color: "#2c51db"
-      icon: https://cos.xiaopangza.cn/img/images/icons/CSS3.png?imageMogr2/format/webp/interlace/1
-    - name: JS
-      color: "#f7cb4f"
-      icon: https://cos.xiaopangza.cn/img/images/icons/JS.png?imageMogr2/format/webp/interlace/1
-    - name: HTML
-      color: "#e9572b"
-      icon: https://cos.xiaopangza.cn/img/images/icons/HTML.png?imageMogr2/format/webp/interlace/1
+      color: "#3776ab"
+      icon: /img/tech/python.svg
+    - name: Node.js
+      color: "#339933"
+      icon: /img/tech/nodejs.svg
+    - name: Oracle
+      color: "#f80000"
+      icon: /img/tech/oracle.svg
     - name: Git
-      color: "#df5b40"
-      icon: https://cos.xiaopangza.cn/img/images/icons/Git.webp
-    - name: Apifox
-      color: "#e65164"
-      icon: https://cos.xiaopangza.cn/img/images/icons/Apifox.webp
-    - name: Photoshop
-      color: "#4082c3"
-      icon: https://cos.xiaopangza.cn/img/images/icons/Photoshop.png?imageMogr2/format/webp/interlace/1
-    - name: AfterEffect
-      color: "#fff"
-      icon: https://cos.xiaopangza.cn/img/images/icons/AfterEffect.png?imageMogr2/format/webp/interlace/1
-    - name: FinalCutPro
-      color: "#fff"
-      icon: https://cos.xiaopangza.cn/img/images/icons/FinalCutPro.png?imageMogr2/format/webp/interlace/1
+      color: "#f05032"
+      icon: /img/tech/git.svg
+    - name: IntelliJ IDEA
+      color: "#111111"
+      icon: /img/tech/intellij.svg

@@ -6,18 +6,15 @@ menu:
 
   友链:
     友人帐: /link/ || anzhiyu-icon-link
-    朋友圈: /fcircle/ || anzhiyu-icon-artstation
     留言板: /comments/ || anzhiyu-icon-envelope
 
   我的:
     音乐馆: /music/ || anzhiyu-icon-music
     #    追番页: /bangumis/ || anzhiyu-icon-bilibili
     #    相册集: /album/ || anzhiyu-icon-images
-    小空调: /air-conditioner/ || anzhiyu-icon-fan
     我的装备: /equipment/ || anzhiyu-icon-dice-d20
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane
-    闲言碎语: /essay/ || anzhiyu-icon-lightbulb
   #   随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
 
 # nav相关配置
@@ -36,9 +33,9 @@ nav:
           icon: /img/favicon.ico
     - title: 项目
       item:
-        - name: Alist
-          link: https://alist.xiaopangza.fun/
-          icon: https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg
+        - name: GitHub
+          link: https://github.com/xiaopangza123
+          icon: /img/siteicon/32.png
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -75,7 +72,7 @@ social:
 # 作者卡片 状态
 author_status:
   enable: true
-  statusImg: "https://emotion.acs.pw/emotion/QQ/158.gif"
+  statusImg: /img/siteicon/32.png
   skills:
     - 🤖 AI 与智能工具实践
     - 🐧 Linux 与服务器运维
@@ -145,7 +142,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "linear-gradient(135deg, #182848 0%, #425AEF 52%, #6c7cff 100%)"
+index_img: /img/home/hero.png
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: transparent
@@ -158,9 +155,11 @@ cover:
   # the position of cover in home page (封面显示的位置)
   # left/right/both
   position: left
-  # Stable local fallback avoids random third-party image failures.
+  # Stable local fallbacks avoid random third-party image failures.
   default_cover:
-    - /img/default_cover.jpg
+    - /img/covers/connect-hermes-agent-to-intellij-idea-via-acp.png
+    - /img/covers/install-hermes-agent-on-debian13-china.png
+    - /img/covers/oracle-archivelog-management.png
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -202,13 +201,7 @@ post_copyright:
 # 文章打赏
 reward:
   enable: false
-  QR_code:
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
-      link:
-      text: 微信
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
-      link:
-      text: 支付宝
+  QR_code: []
 # toc (目录)
 toc:
   post: true
@@ -404,7 +397,7 @@ footer:
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: true
+    enable: false
     list:
       - link: https://hexo.io/
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg
@@ -955,35 +948,35 @@ css_prefix: true
 home_top:
   enable: true
   timemode: date
-  title: 分享实践与思考
-  subTitle: 把踩过的坑，整理成可复用的路。
+  title: 小胖砸的技术笔记
+  subTitle: AI 智能体、Linux 运维与 Oracle 实践
   siteText: xiaopangza.site
   category:
     - name: AI 与 Hermes
-      path: /tags/
+      path: /categories/AI-与智能体/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
     - name: Linux 与运维
-      path: /archives/
+      path: /categories/Linux-与运维/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
-    - name: Java 与开发
-      path: /categories/
+    - name: Oracle 数据库
+      path: /categories/Oracle-数据库/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-  default_descr: 持续整理中，欢迎从标签和归档开始浏览。
+  default_descr: 已同步 Halo 技术文章，从分类或文章卡片开始阅读。
   swiper:
-    enable: true
+    enable: false
     swiper_css: /css/swiper.min.css
     swiper_js: /js/swiper.min.js
   banner:
-    tips: 双站导航
-    title: 访问 Halo 主博客
-    image: /img/default_cover.jpg
-    link: https://blog.xiaopangza.cn/
+    tips: 精选文章
+    title: Debian 13 安装 Hermes Agent
+    image: /img/covers/install-hermes-agent-on-debian13-china.png
+    link: /posts/install-hermes-agent-on-debian13-china/
 
 # 朋友圈配置
 friends_vue:
@@ -1003,7 +996,7 @@ bubble:
 
 #  控制台打印信息
 console:
-  enable: true
+  enable: false
 
 # 51a统计配置
 LA:
@@ -1150,8 +1143,7 @@ dynamicEffect:
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-  # 自定义css
-  # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/custom.css">
 
   bottom:
   # 自定义js
