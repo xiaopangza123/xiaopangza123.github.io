@@ -13,7 +13,7 @@
 #      - 团队小组发动机 🧱
       - 壮汉人狠话不多 💢
   name: 小胖砸
-  description: 是一名 后端端工程师、开发者、博主
+  description: 记录 AI、Linux、Java、Oracle 与服务器实践的个人技术博主
   aboutsiteTips:
     tips: 生活
     title1: 源自
@@ -28,30 +28,30 @@
     tips: 技能
     title: 开启创造力
   careers:
-    tips: 生涯
-    title: 无限进步
+    tips: 方向
+    title: 持续学习与构建
     list:
-      - desc: EDU,SYAU 信息与计算科学
+      - desc: AI 工具与智能体实践
         color: "#357ef5"
-      - desc: Co.,Pansoft 项目三部
+      - desc: Linux、Java 与服务器技术
         color: "#357ef5"
-    img: #https://cos.xiaopangza.cn/img/upload/%E9%80%8F%E6%98%8E.png
+    img:
   statistic:
     link: /archives
     text: 文章隧道
     cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
   map:
-    title: 我现在住在
-    StrengthenTitle: 中国，乌鲁木齐市
+    title: 内容主题
+    StrengthenTitle: AI、开发与服务器实践
     background: https://cos.xiaopangza.cn/img/upload/%E7%99%BD%E5%A4%A9.png
     backgroundDark: https://cos.xiaopangza.cn/img/upload/%E5%A4%9C%E9%97%B4.png
   selfInfo:
-    selfInfoTips1: 生于
-    selfInfoContentYear: 1998
-    selfInfoTips2: SYAU
-    selfInfoContent2: 信息与计算科学
-    selfInfoTips3: 现在职业
-    selfInfoContent3: Java开发
+    selfInfoTips1: 站点
+    selfInfoContentYear: Hexo + Halo
+    selfInfoTips2: 关注
+    selfInfoContent2: AI、Linux、Java、Oracle
+    selfInfoTips3: 原则
+    selfInfoContent3: 真实验证、持续沉淀
   personalities:
     author_name: 鉴赏家
     personality_type: ISTP

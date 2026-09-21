@@ -5,7 +5,7 @@ menu:
     标签: /tags/ || anzhiyu-icon-tags
 
   友链:
-    #     友人帐: /link/ || anzhiyu-icon-link
+    友人帐: /link/ || anzhiyu-icon-link
     朋友圈: /fcircle/ || anzhiyu-icon-artstation
     留言板: /comments/ || anzhiyu-icon-envelope
 
@@ -75,17 +75,12 @@ social:
 # 作者卡片 状态
 author_status:
   enable: true
-  # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   statusImg: "https://emotion.acs.pw/emotion/QQ/158.gif"
   skills:
-    - 🤖️ 数码科技爱好者
-    - 🔍 分享与热心帮助
-    # - 🏠 智能家居小能手
-    # - 🔨 设计开发一条龙
-    # - 🤝 专修交互与设计
-    - 🏃 脚踏实地行动派
-    # - 🧱 团队小组发动机
-    # - 💢 壮汉人狠话不多
+    - 🤖 AI 与智能工具实践
+    - 🐧 Linux 与服务器运维
+    - ☕ Java 与后端开发
+    - 🗄️ Oracle 数据库笔记
 
 # search (搜索)
 # see https://blog.anheyu.com/posts/c27d.html#搜索系统
@@ -113,8 +108,8 @@ docsearch:
 
 # Local search
 local_search:
-  enable: false
-  preload: true
+  enable: true
+  preload: false
   CDN:
 
 # Math (数学)
@@ -150,7 +145,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "background: url(https://www.dmoe.cc/random.php) top / cover no-repeat" # "background: url() top / cover no-repeat"
+index_img: "linear-gradient(135deg, #182848 0%, #425AEF 52%, #6c7cff 100%)"
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: transparent
@@ -163,9 +158,9 @@ cover:
   # the position of cover in home page (封面显示的位置)
   # left/right/both
   position: left
-  # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
+  # Stable local fallback avoids random third-party image failures.
   default_cover:
-    - https://www.dmoe.cc/random.php
+    - /img/default_cover.jpg
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -196,8 +191,8 @@ post_meta:
 post_copyright:
   enable: true
   decode: false
-  author_href: /favicon.ico
-  location: 乌鲁木齐
+  author_href: https://xiaopangza.site
+  location: 中国
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   avatarSinks: false # hover时头像下沉
@@ -289,18 +284,13 @@ mainTone:
   cover_change: true # 整篇文章跟随cover修改主色调
 
 # 评论系统
-# --------------------------------------
-
+# Artalk 暂不可解析，恢复服务后再启用，避免页面持续加载失败。
 comments:
-  # Up to two comments system, the first will be shown as default
-  # Choose: Valine/Waline/Twikoo/Artalk
-  use: Artalk # Twikoo/Waline
-  text: true # Display the comment name next to the button
-  # lazyload: The comment system will be load when comment element enters the browser's viewport.
-  # If you set it to true, the comment count will be invalid
-  lazyload: false
-  count: false # Display comment count in post's top_img
-  card_post_count: false # Display comment count in Home Page
+  use:
+  text: true
+  lazyload: true
+  count: false
+  card_post_count: false
 
 # valine
 # https://valine.js.org
@@ -393,22 +383,22 @@ footer:
   owner:
     enable: true #页脚网站所有者是否启用
     since: 2024 #页脚网站所有者@2024-当前年份
-  custom_text:
+  custom_text: 专注 AI、Linux、Java、Oracle 与服务器实践
   runtime:
     enable: true #运行时间是否启用
     launch_time: 01/31/2024 00:00:00 # 网站上线时间
-    work_img: https://img.shields.io/badge/%E5%B0%8F%E8%83%96%E7%A0%B8-%E6%91%B8%E9%B1%BC%E4%B8%AD-blue?style=social&logo=hoppscotch&labelColor=blue
-    work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://img.shields.io/badge/%E5%B0%8F%E8%83%96%E7%A0%B8-%E4%B8%8B%E7%8F%AD%E4%BA%86-blue?style=social&logo=counterstrike&labelColor=blue
-    offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
+    work_img:
+    work_description: 记录实践，持续学习。
+    offduty_img:
+    offduty_description: 分享技术，也记录生活。
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
     enable: true
     list:
-      - link: https://hexo.io/ #徽标指向网站链接
-        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
-        message: 博客框架为Hexo_v5.4.0 #徽标提示语
+      - link: https://hexo.io/
+        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg
+        message: 本站使用 Hexo 7 构建
       - link: https://blog.anheyu.com/
         shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
         message: 本站使用AnZhiYu主题
@@ -416,12 +406,12 @@ footer:
     enable: true
     centerImg:
     left:
-     - title: email
-       link: mailto:anzhiyu-c@qq.com
-       icon: anzhiyu-icon-envelope
+     - title: GitHub
+       link: https://github.com/xiaopangza123
+       icon: anzhiyu-icon-github
     right:
      - title: CC
-       link: /copyright
+       link: https://creativecommons.org/licenses/by-nc-sa/4.0/
        icon: anzhiyu-icon-copyright-line
   list:
     enable: false
@@ -525,14 +515,8 @@ google_adsense:
 #   post:
 
 # Verification (站长验证)
-# --------------------------------------
-site_verification:
-  - name: google-site-verification
-    content: xxx
-  - name: baidu-site-verification
-    content: code-xxx
-  - name: msvalidate.01
-    content: xxx
+# 在搜索引擎后台取得真实验证码后再添加，避免输出占位元数据。
+site_verification: []
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -636,8 +620,8 @@ activate_power_mode:
 
 # Mouse click effects: fireworks (鼠标点击效果: 烟火特效)
 fireworks:
-  enable: true
-  zIndex: 9999 # -1 or 9999
+  enable: false
+  zIndex: 9999
   mobile: false
 
 # Mouse click effects: Heart symbol (鼠标点击效果: 爱心)
@@ -690,28 +674,20 @@ hr_icon:
 # the subtitle on homepage (主页subtitle)
 subtitle:
   enable: true
-  # Typewriter Effect (打字效果)
   effect: true
-  # Effect Speed Options (打字效果速度参数)
-  startDelay: 300 # time before typing starts in milliseconds
-  typeSpeed: 150 # type speed in milliseconds
-  backSpeed: 50 # backspacing speed in milliseconds
-  # loop (循环打字)
+  startDelay: 300
+  typeSpeed: 100
+  backSpeed: 40
   loop: true
-  # source 调用第三方服务
-  # source: false 关闭调用
-  # source: 1  调用一言网的一句话（简体） https://hitokoto.cn/
-  # source: 2  调用一句网（简体） http://yijuzhan.com/
-  # source: 3  调用今日诗词（简体） https://www.jinrishici.com/
-  # subtitle 会先显示 source , 再显示 sub 的内容
-  source: 1
-  # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
+  source: false
   sub:
-  # - 生活明朗&#44;万物可爱&#44;人间值得&#44;未来可期.
+    - 记录真实实践，沉淀可复用方案。
+    - 分享 AI、Linux、Java 与服务器技术。
+    - 保持好奇，持续构建。
 
 # Loading Animation (加载动画)
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -736,11 +712,11 @@ aside:
     category: true
   card_author:
     enable: true
-    description: <span style="color:#fff">我是一名</span><br><strong style="background-color:#85ffbd;background-image:linear-gradient(45deg,#85ffbd 0,#fffb7d 100%)">Java开发</strong>&nbsp;<strong style="background-color:#fbab7e;background-image:linear-gradient(62deg,#fbab7e 0,#f7ce68 100%)">小趴菜</strong><br><strong style="background-color:#3eecac;background-image:linear-gradient(19deg,#3eecac 0,#ee74e1 100%)">社恐</strong>&nbsp;<strong style="background-color:#fbda61;background-image:linear-gradient(45deg,#fbda61 0,#ff5acd 100%)">ISTP</strong>&nbsp;<strong style="background-color:#f4d03f;background-image:linear-gradient(132deg,#f4d03f 0,#16a085 100%)">熬夜狂</strong><canvas id="canvas" style="width:100%" width="820" height="250"></canvas><script src="https://www.lqbby.com/upload/clock.js"></script>
-    name_link: /
+    description: 专注 AI、Linux、Java、Oracle 与服务器实践。记录可复现的技术过程，也分享数字生活。
+    name_link: /about/
   card_announcement:
     enable: true
-    content: 欢迎来看我的博客鸭~
+    content: 欢迎光临。这里记录技术实践、踩坑过程与可复用方案。
   card_weixin:
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -790,7 +766,7 @@ runtimeshow:
   publish_date: 1/31/2024 00:00:00
 # 最新评论
 newest_comments:
-  enable: true
+  enable: false
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -967,37 +943,37 @@ css_prefix: true
 
 # 首页顶部相关配置
 home_top:
-  enable: true # 开关
-  timemode: date #date/updated
-  title: 我想过一种
-  subTitle: 不一样的生活。
+  enable: true
+  timemode: date
+  title: 分享实践与思考
+  subTitle: 把踩过的坑，整理成可复用的路。
   siteText: xiaopangza.site
   category:
-    - name: 记录
-      path: /categories/记录/
+    - name: AI 与 Hermes
+      path: /tags/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 分享
-      path: /categories/分享/
-      shadow: var(--anzhiyu-shadow-red)
-      class: red
-      icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活日常/
+    - name: Linux 与运维
+      path: /archives/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
-  default_descr: 再怎么看我也不知道怎么描述它的啦！
+    - name: Java 与开发
+      path: /categories/
+      shadow: var(--anzhiyu-shadow-red)
+      class: red
+      icon: anzhiyu-icon-fire
+  default_descr: 持续整理中，欢迎从标签和归档开始浏览。
   swiper:
     enable: true
-    swiper_css: /js/swiper.min.js  #swiper css依赖
-    swiper_js: /css/swiper.min.css #swiper js依赖
+    swiper_css: /css/swiper.min.css
+    swiper_js: /js/swiper.min.js
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    tips: 双站导航
+    title: 访问 Halo 主博客
+    image: /img/default_cover.jpg
+    link: https://blog.xiaopangza.cn/
 
 # 朋友圈配置
 friends_vue:
@@ -1009,7 +985,7 @@ friends_vue:
 
 # 深色模式粒子效果canvas
 universe:
-  enable: true
+  enable: false
 
 # 页面卡片顶部气泡升起效果
 bubble:
@@ -1021,7 +997,7 @@ console:
 
 # 51a统计配置
 LA:
-  enable: true
+  enable: false
   ck:
   LingQueMonitorID:
 
@@ -1044,9 +1020,9 @@ comment_barrage_config:
   mailMd5: "a16a8dacd69591447b74b571d266e442"
 
 # 左下角音乐配置项
-# https://github.com/metowolf/MetingJS
+# 音乐页保留，首页默认不自动加载播放器，降低首屏资源消耗。
 nav_music:
-  enable: true
+  enable: false
   console_widescreen_music: true # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 7390449984
   server: tencent
@@ -1165,14 +1141,8 @@ inject:
 # Don't modify the following settings unless you know how they work
 # 非必要请不要修改
 CDN:
-  # The CDN provider of internal scripts (主题内部 js 的 cdn 配置)
-  # option: local/elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
-  # Dev version can only choose. ( dev版的主题只能设置为 local )
   internal_provider: local
-
-  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
-  # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
-  third_party_provider: cbd
+  third_party_provider: jsdelivr
 
   # Add version number to CDN, true or false
   version: true
@@ -1231,12 +1201,8 @@ CDN:
   # aplayer_css:
   # aplayer_js:
   # meting_js:
-   meting_api: https://api.xiaopangza.cn/meting/?server=:server&type=:type&id=:id&r=:r
-  # prismjs_js:
-  # prismjs_lineNumber_js:
-  # prismjs_autoloader:
-   artalk_js: https://artalk.xiaopangza.cn/dist/Artalk.js
-   artalk_css: https://artalk.xiaopangza.cn/dist/Artalk.css
+  # meting_api: 恢复音乐功能时配置可用服务
+  # artalk_js/artalk_css: Artalk 域名恢复后再配置
   # pace_js:
   # pace_default_css:
   # countup_js:

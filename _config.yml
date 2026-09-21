@@ -3,22 +3,28 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 小胖砸的部落格
-subtitle: ''
-description: ''
+title: 小胖砸的Blog
+subtitle: 分享技术与数字生活
+description: 小胖砸的个人技术博客，记录 AI 与 Hermes Agent、Linux、Java、Oracle、服务器运维和数字生活实践。
 keywords:
+  - 小胖砸
+  - 技术博客
+  - Hermes Agent
+  - Linux
+  - Java
+  - Oracle
+  - AI
 author: 小胖砸
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: https://xiaopangza.site
+permalink: posts/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false
+  trailing_html: false
 
 # Directory
 source_dir: source
@@ -99,27 +105,31 @@ ignore:
 theme: anzhiyu
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+## GitHub Pages deployment is handled by .github/workflows/pages.yml
 deploy:
   type: ''
-# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
-algolia:
-  appId: "xxxx"
-  apiKey: "xxxx"
-  adminApiKey: "xxxx"
-  chunkSize: 5000
-  indexName: "hexo"
-  fields:
-    - content:strip:truncate,0,200
-    - excerpt:strip
-    - gallery
-    - permalink
-    - photos
-    - slug
-    - tags
-    - title
 # APlayer
 # https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
 aplayer:
   meting: true
   asset_inject: false
+
+# SEO outputs
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: true
+  order_by: -date
+
+sitemap:
+  path: sitemap.xml
+  rel: true
+  tags: true
+  categories: true
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
