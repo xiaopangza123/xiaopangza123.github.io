@@ -322,7 +322,7 @@ waline:
   serverURL: # Waline server address url
   bg: # waline background
   pageview: false
-  meta: false # 归属地, 操作系统 前是否显示图标
+  meta_css: false # 归属地、操作系统等元数据样式
   imageUploader: true # 是否启用图片上传功能，默认开启，限制为 128kb 的 base64 图片
   # 以下为可选配置，后续若有新增/修改配置参数可在此自行添加/修改
   option:
@@ -334,6 +334,16 @@ twikoo:
   region:
   visitor: false
   option:
+
+# Giscus（保持关闭；启用前需配置公开仓库和 Discussion 分类）
+giscus:
+  repo:
+  repo_id:
+  category_id:
+  theme:
+    light: light
+    dark: dark
+  option: {}
 
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
@@ -398,7 +408,7 @@ footer:
     list:
       - link: https://hexo.io/
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg
-        message: 本站使用 Hexo 7 构建
+        message: 本站使用 Hexo 8 构建
       - link: https://blog.anheyu.com/
         shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
         message: 本站使用AnZhiYu主题
@@ -1001,6 +1011,13 @@ LA:
   ck:
   LingQueMonitorID:
 
+# Umami 关于页统计。Token 会进入前端，未评估最小权限前保持关闭。
+umami:
+  enable: false
+  apiHost:
+  websiteId:
+  token:
+
 # 标签卖萌
 diytitle:
   enable: true
@@ -1028,6 +1045,9 @@ nav_music:
   server: tencent
   volume: 0.7 # 默认音量
   all_playlist: https://y.qq.com/n/ryqq/playlist/7390449984
+
+# 音乐页默认播放器来源：nav_music / local
+music_page_default: nav_music
 
 # 评论匿名邮箱
 visitorMail:

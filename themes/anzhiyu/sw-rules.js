@@ -9,76 +9,64 @@ module.exports.config = {
    * @type ?Object|boolean
    */
   serviceWorker: {
-    escape: 0,
     cacheName: "AnZhiYuThemeCache",
-    debug: false,
   },
   register: {
-    onsuccess: undefined,
     onerror: undefined,
-    builder: (root, hexoConfig, pluginConfig) => {
-      const { onerror, onsuccess } = pluginConfig.register;
-      return `<script>
-                    (() => {
-                        const sw = navigator.serviceWorker
-                        const error = ${onerror && onerror.toString()}
-                        if (!sw?.register('${new URL(root).pathname}sw.js')
-                            ${onsuccess ? "?.then(" + onsuccess + ")" : ""}
-                            ?.catch(error)
-                            ) error()
-                    })()
-                </script>`;
-    },
   },
   dom: {
     onsuccess: () => {
-      caches.match('https://id.v3/').then(function(response) {
-        if (response) {
-          // 如果找到了匹配的缓存响应
-          response.json().then(function(data) {
-            anzhiyuPopupManager && anzhiyuPopupManager.enqueuePopup('通知📢', `已刷新缓存，更新为${data.global + "." + data.local}版本最新内容`, null, 5000);
-          });
-        } else {
-          console.info('未找到匹配的缓存响应');
-        }
-      }).catch(function(error) {
-        console.error('缓存匹配出错:', error);
-      });
+      caches
+        .match("https://id.v3/")
+        .then(function (response) {
+          if (response) {
+            // 如果找到了匹配的缓存响应
+            response.json().then(function (data) {
+              anzhiyuPopupManager &&
+                anzhiyuPopupManager.enqueuePopup(
+                  "通知📢",
+                  `已刷新缓存，更新为${data.global + "." + data.local}版本最新内容`,
+                  null,
+                  5000
+                );
+            });
+          } else {
+            console.info("未找到匹配的缓存响应");
+          }
+        })
+        .catch(function (error) {
+          console.error("缓存匹配出错:", error);
+        });
     },
   },
   json: {
-    maxHtml: 15,
-    charLimit: 1024,
-    merge: ['page', 'archives', 'categories', 'tags'],
-    exclude: {
-      localhost: [],
-      other: [],
-    },
+    merge: ["page", "archives", "categories", "tags"],
   },
   external: {
-    timeout: 5000,
-    js: [],
     stable: [
       /^https:\/\/npm\.elemecdn\.com\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
       /^https:\/\/cdn\.cbd\.int\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
       /^https:\/\/cdn\.jsdelivr\.net\/npm\/[^/@]+\@[^/@]+\/[^/]+\/[^/]+$/,
     ],
     replacer: srcUrl => {
-      if (srcUrl.startsWith('https://npm.elemecdn.com')) {
-        const url = new URL(srcUrl)
+      if (srcUrl.startsWith("https://npm.elemecdn.com")) {
+        const url = new URL(srcUrl);
         return [
-            srcUrl,
-            `https://cdn.cbd.int` + url.pathname,
-            `https://cdn.jsdelivr.net/npm` + url.pathname,
-            `https://cdn1.tianli0.top/npm` + url.pathname,
-            `https://fastly.jsdelivr.net/npm` + url.pathname
-        ]
+          srcUrl,
+          `https://cdn.cbd.int` + url.pathname,
+          `https://cdn.jsdelivr.net/npm` + url.pathname,
+          `https://cdn1.tianli0.top/npm` + url.pathname,
+          `https://fastly.jsdelivr.net/npm` + url.pathname,
+        ];
       } else {
-        return srcUrl
+        return srcUrl;
       }
     },
-  }
+  },
 };
+
+/** 跳过处理番剧封面 */
+module.exports.skipRequest = request => request.url.startsWith("https://i0.hdslb.com");
 
 /**
  * 缓存列表
@@ -138,3 +126,12 @@ module.exports.ejectValues = (hexo, rules) => {
     },
   };
 };
+
+/**
+ * 跳过某些请求，不走 Service Worker 缓存
+ * 解决音乐进度条拖动跳回问题
+ * @param request {Request} 请求对象
+ * @return {boolean} 返回 true 表示跳过该请求
+ */
+module.exports.skipRequest = request =>
+  request.url.startsWith("https://i0.hdslb.com") || request.url.startsWith("https://meting.qjqq.cn");

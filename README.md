@@ -14,7 +14,10 @@
 
 ## 本地开发
 
-要求 Node.js 20–22。
+要求 Node.js 20.19+，推荐 Node.js 22 LTS。当前核心版本：
+
+- Hexo 8.1.2
+- AnZhiYu 1.7.1
 
 ```bash
 npm ci

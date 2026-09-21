@@ -7,14 +7,14 @@
   <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-anzhiyu"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-anzhiyu?color=red&label=npm"></a>
   <a title="GitHub Commits" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/commits/master"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/anzhiyu-c/hexo-theme-anzhiyu.svg?style=flat&color=brightgreen&label=commits"></a>
   <br><br>
-  <a title="GitHub Watchers" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/watchers"><img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/anzhiyu-c/hexo-theme-anzhiyu.svg?label=Watchers&style=social"></a>  
-  <a title="GitHub Stars" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/anzhiyu-c/hexo-theme-anzhiyu.svg?label=Stars&style=social"></a>  
-  <a title="GitHub Forks" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/anzhiyu-c/hexo-theme-anzhiyu.svg?label=Forks&style=social"></a>  
+  <a title="GitHub Watchers" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/watchers"><img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/anzhiyu-c/hexo-theme-anzhiyu.svg?label=Watchers&style=social"></a>
+  <a title="GitHub Stars" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/anzhiyu-c/hexo-theme-anzhiyu.svg?label=Stars&style=social"></a>
+  <a title="GitHub Forks" target="_blank" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/anzhiyu-c/hexo-theme-anzhiyu.svg?label=Forks&style=social"></a>
 </p>
 
 <p align="center"><a title="中文" href="/README.md">🇨🇳 中文简体</a> | 🇬🇧 English</p>
 
-Preview: 👍 [AnZhiYu](https://blog.anheyu.com/) || 🤞 [AnZhiYu](https://index.anheyu.com/)
+Preview: 👍 [AnZhiYu](https://hexo.anheyu.com/) || 🤞 [AnZhiYu](https://index.anheyu.com/)
 
 Document: 📖 [anzhiyu Docs](https://docs.anheyu.com/)
 
@@ -52,6 +52,7 @@ Users who install the theme through Npm can ignore it, and other users are recom
 
 - macos/linux
   Run in the blog root directory
+
   ```bash
   cp -rf ./themes/anzhiyu/_config.yml ./_config.anzhiyu.yml
   ```
@@ -62,10 +63,11 @@ Users who install the theme through Npm can ignore it, and other users are recom
 If you modify any theme configuration in the future, you only need to modify the configuration of_config.anzhiyu.yml.
 
 Note:
-  - as long as the configurations that exist in `_ config.anzhiyu.yml` are of high priority, it is invalid to modify the original` _ config.yml`.
-  - there may be configuration changes each time the topic is updated. Please pay attention to the update instructions. You may need to manually modify `_ config.anzhiyu.yml`.
-  - to check whether the override configuration has taken effect, you can check the command line output via `override g-- debug`.
-  - if you want to overwrite some configurations to empty, be careful not to delete the primary key, otherwise it cannot be overwritten
+
+- as long as the configurations that exist in `_ config.anzhiyu.yml` are of high priority, it is invalid to modify the original` _ config.yml`.
+- there may be configuration changes each time the topic is updated. Please pay attention to the update instructions. You may need to manually modify `_ config.anzhiyu.yml`.
+- to check whether the override configuration has taken effect, you can check the command line output via `override g-- debug`.
+- if you want to overwrite some configurations to empty, be careful not to delete the primary key, otherwise it cannot be overwritten
 
 ## Functional characteristics
 

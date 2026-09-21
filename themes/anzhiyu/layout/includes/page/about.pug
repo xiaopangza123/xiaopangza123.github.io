@@ -23,13 +23,14 @@ if site.data.about
           .author-tag-right
             each item in avatarSkills.right
               span.author-tag=item
-      p.p.center.logo.large 关于我
+      p.p.center.logo.large=_p('about.title')
       p.p.center.small=subtitle
       .author-content
         .author-content-item.myInfoAndSayHello
-          .title1 你好，很高兴认识你👋
+          .title1=_p('about.hello')
           .title2
-            | 我叫 
+            =_p('about.im')
+            |
             span.inline-word=aboutName
           .title1=aboutDescription
         .aboutsiteTips.author-content-item
@@ -44,9 +45,9 @@ if site.data.about
                 if index < word.length - 2
                   span(class=(index === 0 ? 'first-tips' : ''))= wordItem
               span(data-up)= word[word.length - 2]
-              |  
+              |
               span(data-show)= word[word.length - 1]
-      
+
       .hello-about
         .cursor(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
         .shapes
@@ -55,7 +56,7 @@ if site.data.about
           .shape.shape-3(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
         .content
           h1=helloAbout
-      
+
       .author-content
         .author-content-item.skills
           .card-content
@@ -71,7 +72,7 @@ if site.data.about
                         .skill-icon(style=`background: ${item.color}`)
                           img.no-lightbox(title=item.name, src=item.icon, alt=item.name)
                         .skill-name
-                          span=item.name 
+                          span=item.name
                   .etc ...
         .author-content-item.careers
           .card-content
@@ -87,24 +88,27 @@ if site.data.about
                 .careers-none
             if careers.img
               img.author-content-img.no-lightbox(alt=careers.tips, src=url_for(careers.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'`)
-      
+
       .author-content
-        if theme.LA.enable
+        if theme.LA.enable || theme.umami.enable
           - let cover = item.statistic.cover
+          - let statisticSource = theme.LA.enable ? '51la' : 'Umami'
+          - let statisticLink = theme.LA.enable ? 'https://invite.51.la/1NzKqTeb?target=V6' : (theme.umami.apiHost || '#')
           .about-statistic.author-content-item(style=`background: url(${cover}) top / cover no-repeat;`)
             .card-content
-              .author-content-item-tips 数据
-              span.author-content-item-title 访问统计
+              .author-content-item-tips=_p('about.data')
+              span.author-content-item-title=_p('about.visit_stats')
               #statistic
               .post-tips
-                | 统计信息来自 
-                a(href='https://invite.51.la/1NzKqTeb?target=V6', target='_blank', rel='noopener nofollow') 51la网站统计
+                =_p('about.stats_from')
+                |
+                a(href=statisticLink, target='_blank', rel='noopener nofollow')= statisticSource
               .banner-button-group
                 - let link = item.statistic.link
                 - let text = item.statistic.text
                 a.banner-button(onclick=`pjax.loadUrl("${link}")`)
                   i.anzhiyufont.anzhiyu-icon-arrow-circle-right
-                  |  
+                  |
                   span.banner-button-text=text
         .author-content-item-group.column.mapAndInfo
           - let mapBackground = item.map.background
@@ -125,40 +129,38 @@ if site.data.about
             - let { selfInfoTips1, selfInfoContentYear, selfInfoTips2, selfInfoContent2, selfInfoTips3, selfInfoContent3 } = item.selfInfo
             div
               span.selfInfo-title=selfInfoTips1
-              |  
+              |
               span.selfInfo-content#selfInfo-content-year(style='color:#43a6c6')=selfInfoContentYear
             div
               span.selfInfo-title=selfInfoTips2
-              |  
+              |
               span.selfInfo-content(style='color:#c69043')=selfInfoContent2
             div
               span.selfInfo-title=selfInfoTips3
-              |  
+              |
               span.selfInfo-content(style='color:#b04fe6')=selfInfoContent3
-      
+
       .author-content
         .author-content-item.personalities
           - let {author_name, personality_type, photo_url, personality_img, name_url, personality_type_color} = item.personalities
-          .author-content-item-tips 性格
+          .author-content-item-tips=_p('about.personality')
           span.author-content-item-title= author_name
           .title2(style=`color:${personality_type_color ? personality_type_color : "#ac899c"}`)= personality_type
           .post-tips
-            | 在 
-            a(href='https://www.16personalities.com/', target='_blank', rel='noopener nofollow') 16personalities
-            |  了解更多关于 
-            a(target='_blank', rel='noopener external nofollow', href= name_url)= author_name
+            - const learnMoreText = _p('about.learn_more_at', '<a href="https://www.16personalities.com/" target="_blank" rel="noopener nofollow">16personalities</a>', '<a target="_blank" rel="noopener external nofollow" href="' + name_url + '">' + author_name + '</a>')
+            != learnMoreText
           .image
-            img.no-lightbox(src=url_for(personality_img), alt='人格')
+            img.no-lightbox(src=url_for(personality_img), alt=_p('about.personality_img_alt'))
         .author-content-item.myphoto
-          img.author-content-img.no-lightbox(alt='自拍', src=url_for(photo_url))
-      
+          img.author-content-img.no-lightbox(alt=_p('about.selfie_alt'), src=url_for(photo_url))
+
       .author-content
         .author-content-item.maxim
           - let {maxim_tips, maxim_top, maxim_bottom} = item.maxim
           .author-content-item-tips=maxim_tips
           span.maxim-title
             span(style='opacity:.6;margin-bottom:8px')=maxim_top
-            |  
+            |
             span=maxim_bottom
         .author-content-item.buff
           .card-content
@@ -166,7 +168,7 @@ if site.data.about
             .author-content-item-tips=buff_tips
             span.buff-title
               span(style='opacity:.6;margin-bottom:8px')=buff_top
-              |  
+              |
               span=buff_bottom
           .card-background-icon
             i.anzhiyufont.anzhiyu-icon-dice-d20
@@ -192,7 +194,7 @@ if site.data.about
                   a.comic-item(href=i.href, target="_blank", title=i.name)
                     .comic-item-cover
                       img(src=i.cover, alt=i.name)
-      
+
       .author-content
         - let {music_tips, music_title, music_link, music_bg} = item.music
         - let {like_tips, like_title, like_bottom, like_bg} = item.like
@@ -207,26 +209,26 @@ if site.data.about
             .author-content-item-tips=music_tips
             span.author-content-item-title=music_title
             .content-bottom
-              .tips=`跟 ${aboutName} 一起欣赏更多音乐`
+              .tips=_p('about.enjoy_music_with', aboutName)
             .banner-button-group
               a.banner-button(onclick=`pjax.loadUrl("${music_link}")`)
                 i.anzhiyufont.anzhiyu-icon-arrow-circle-right
-                |  
-                span.banner-button-text 更多推荐
+                |
+                span.banner-button-text=_p('about.more_recommend')
 
       if page.content
         .author-content
           .create-site-post.author-content-item.single
             != page.content
-        
+
       - let rawData = item.reward_list
       if rawData
         - let sortedByDate = rawData.slice().sort((a, b) => new Date(b.datatime) - new Date(a.datatime));
         .author-content
           .author-content-item.single.reward#about-reward
-            .author-content-item-tips 致谢
-            span.author-content-item-title 赞赏名单
-            .author-content-item-description 感谢因为有你们，让我更加有创作的动力。
+            .author-content-item-tips=_p('about.thanks')
+            span.author-content-item-title=_p('about.reward_list')
+            .author-content-item-description=_p('about.reward_thanks')
               .reward-list-all
                 - let reward_list_amount = item.reward_list.sort((a,b)=>b.amount -  a.amount)
                 each item, index in reward_list_amount
@@ -235,18 +237,18 @@ if site.data.about
                     .reward-list-bottom-group
                       if item.amount >= 50
                         .reward-list-item-money(style='background:var(--anzhiyu-yellow)')=`¥${item.amount}`
-                      else 
+                      else
                         .reward-list-item-money=`¥${item.amount + (item.suffix ? item.suffix : "")}`
                       .datatime.reward-list-item-time(datatime=item.datatime)=new Date(item.datatime).toISOString().slice(0, -14)
               .reward-list-updateDate
-                | 最新更新时间： 
+                =_p('about.last_update')
                 time.datatime.reward-list-updateDate-time(datatime=sortedByDate[0].datatime)=new Date(sortedByDate[0].datatime).toISOString().slice(0, -14)
             .about-reward
               #con
               #TA-con(onclick="anzhiyu.rewardShowConsole()")
                 #text-con
                   #linght
-                  #TA 为TA充电
+                  #TA=_p('about.charge_for_ta')
               #tube-con
                 svg(viewBox='0 0 1028 385', fill='none', xmlns='http://www.w3.org/2000/svg')
                   path(d='M1 77H234.226L307.006 24H790', stroke='#e5e9ef', stroke-width='20')
@@ -280,40 +282,47 @@ if site.data.about
                     circle(r='14', transform='matrix(1 0 0 -1 790 25)', fill='white')
                     ellipse(cx='790', cy='307.5', rx='25', ry='25.5', fill='#ffd52b')
                     circle(r='14', transform='matrix(1 0 0 -1 790 308)', fill='white')
-                p#people
-                  | 共
-                  b=item.reward_list.length
-                  | 人
+                - const totalPeopleText = _p('about.total_people', '<b>' + item.reward_list.length + '</b>')
+                p#people!= totalPeopleText
 
 
     script(src=url_for(theme.asset.countup_js))
     - const ck = theme.LA.ck
+    - const umamiEnable = theme.umami.enable
+    - const umamiApiHost = theme.umami.apiHost || ''
+    - const umamiWebsiteId = theme.umami.websiteId || ''
+    - const umamiToken = theme.umami.token || ''
+    - const laEnable = theme.LA.enable
+    -
+      const i18nStats = {
+        today_visitors: _p('about.stats.today_visitors'),
+        today_views: _p('about.stats.today_views'),
+        yesterday_visitors: _p('about.stats.yesterday_visitors'),
+        yesterday_views: _p('about.stats.yesterday_views'),
+        month_views: _p('about.stats.month_views'),
+        total_views: _p('about.stats.total_views'),
+        fetch_failed: _p('about.stats.fetch_failed')
+      }
     script(defer).
       function initAboutPage() {
-        fetch("https://v6-widget.51.la/v6/#{ck}/quote.js")
-          .then(res => res.text())
-          .then(data => {
-            let title = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
-            let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+        const statisticEl = document.getElementById("statistic");
+        let statistic = [];
+        let numValues = [];
 
-            num = num.map(el => {
-              let val = el.replace(/(<\/span><span>)/g, "");
-              let str = val.replace(/(<\/span><\/p>)/g, "");
-              return str;
-            });
+        const i18nStats = !{JSON.stringify(i18nStats)};
 
-            let statisticEl = document.getElementById("statistic");
+        // 统计数据渲染函数
+        function renderStatistic(title, num) {
+          if (!statisticEl) return;
+          numValues = num;
+          statistic = [];
 
-            // 自定义不显示哪个或者显示哪个，如下为不显示 最近活跃访客 和 总访问量
-            let statistic = [];
             for (let i = 0; i < num.length; i++) {
-              if (!statisticEl) return;
-              if (i == 0) continue;
               statisticEl.innerHTML +=
-                "<div><span>" + title[i] + "</span><span id=" + title[i] + ">" + num[i] + "</span></div>";
+              "<div><span>" + title[i] + "</span><span id='stat-" + i + "'>" + num[i] + "</span></div>";
               queueMicrotask(() => {
                 statistic.push(
-                  new CountUp(title[i], 0, num[i], 0, 2, {
+                new CountUp("stat-" + i, 0, num[i], 0, 2, {
                     useEasing: true,
                     useGrouping: true,
                     separator: ",",
@@ -323,35 +332,102 @@ if site.data.about
                   })
                 );
               });
+          }
             }
 
+        // 统计数字动画
+        function statisticUP() {
             let statisticElement = document.querySelector(".about-statistic.author-content-item");
-            function statisticUP() {
               if (!statisticElement) return;
 
               const callback = (entries, observer) => {
                 entries.forEach(entry => {
                   if (entry.isIntersecting) {
-                    for (let i = 0; i < num.length; i++) {
-                      if (i == 0) continue;
+                for (let i = 0; i < statistic.length; i++) {
                       queueMicrotask(() => {
-                        statistic[i - 1].start();
+                    statistic[i].start();
                       });
                     }
-                    observer.disconnect(); // 停止观察元素，因为不再需要触发此回调
+                observer.disconnect();
                   }
                 });
               };
 
-              const options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0
-              };
+          const options = { root: null, rootMargin: "0px", threshold: 0 };
               const observer = new IntersectionObserver(callback, options);
               observer.observe(statisticElement);
             }
 
+        // 51la 统计
+        if (#{laEnable}) {
+          fetch("https://v6-widget.51.la/v6/#{ck}/quote.js")
+            .then(res => res.text())
+            .then(data => {
+              let title = [i18nStats.today_visitors, i18nStats.today_views, i18nStats.yesterday_visitors, i18nStats.yesterday_views, i18nStats.month_views, i18nStats.total_views];
+              let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+
+              num = num.map(el => {
+                let val = el.replace(/(<\/span><span>)/g, "");
+                let str = val.replace(/(<\/span><\/p>)/g, "");
+                return str;
+              });
+
+              // 跳过第一个"最近活跃"
+              num = num.slice(1);
+              renderStatistic(title, num);
+              statisticUP();
+            })
+            .catch(err => {
+              console.error("51la stats fetch failed:", err);
+              if (statisticEl) statisticEl.innerHTML = "<div>" + i18nStats.fetch_failed + "</div>";
+            });
+        }
+
+        // Umami 统计
+        if (#{umamiEnable}) {
+          const apiHost = "#{umamiApiHost}";
+          const websiteId = "#{umamiWebsiteId}";
+          const token = "#{umamiToken}";
+
+          const now = Date.now();
+          const todayStart = new Date().setHours(0, 0, 0, 0);
+          const yesterdayStart = todayStart - 86400000;
+          const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).getTime();
+
+          const fetchStats = async (startAt, endAt) => {
+            const res = await fetch(`${apiHost}/api/websites/${websiteId}/stats?startAt=${startAt}&endAt=${endAt}`, {
+              headers: { 'Authorization': `Bearer ${token}` }
+            });
+            return res.json();
+          };
+
+          Promise.all([
+            fetchStats(todayStart, now),      // today
+            fetchStats(yesterdayStart, todayStart), // yesterday
+            fetchStats(monthStart, now),      // month
+            fetchStats(0, now)                // total
+          ])
+            .then(([today, yesterday, month, total]) => {
+              const title = [i18nStats.today_visitors, i18nStats.today_views, i18nStats.yesterday_visitors, i18nStats.yesterday_views, i18nStats.month_views, i18nStats.total_views];
+              const num = [
+                today.visitors?.value || today.uniques?.value || 0,
+                today.pageviews?.value || 0,
+                yesterday.visitors?.value || yesterday.uniques?.value || 0,
+                yesterday.pageviews?.value || 0,
+                month.pageviews?.value || 0,
+                total.pageviews?.value || 0
+              ];
+
+              renderStatistic(title, num);
+              statisticUP();
+            })
+            .catch(err => {
+              console.error("Umami stats fetch failed:", err);
+              if (statisticEl) statisticEl.innerHTML = "<div>" + i18nStats.fetch_failed + "</div>";
+            });
+        }
+
+        // 出生年份动画
             const selfInfoContentYear = new CountUp("selfInfo-content-year", 0, #{selfInfoContentYear}, 0, 2, {
               useEasing: true,
               useGrouping: false,
@@ -369,23 +445,17 @@ if site.data.about
                 entries.forEach(entry => {
                   if (entry.isIntersecting) {
                     selfInfoContentYear.start();
-                    observer.disconnect(); // 停止观察元素，因为不再需要触发此回调
+                observer.disconnect();
                   }
                 });
               };
 
-              const options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0
-              };
+          const options = { root: null, rootMargin: "0px", threshold: 0 };
               const observer = new IntersectionObserver(callback, options);
               observer.observe(selfInfoContentYearElement);
             }
 
             selfInfoContentYearUp();
-            statisticUP()
-          });
 
         var pursuitInterval = null;
         pursuitInterval = setInterval(function () {

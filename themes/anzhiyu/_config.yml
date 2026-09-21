@@ -29,7 +29,7 @@ nav:
     - title: 网页
       item:
         - name: 博客
-          link: https://blog.anheyu.com/
+          link: https://hexo.anheyu.com/
           icon: /img/favicon.ico
     - title: 项目
       item:
@@ -85,7 +85,6 @@ author_status:
     # - 💢 壮汉人狠话不多
 
 # search (搜索)
-# see https://blog.anheyu.com/posts/c27d.html#搜索系统
 # --------------------------------------
 
 # Algolia search
@@ -98,7 +97,7 @@ algolia_search:
     # - Hexo
 
 # Docsearch
-# Apply and Docs: see https://docsearch.algolia.com/
+# Apply and Option Docs: see https://docsearch.algolia.com/
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
@@ -193,13 +192,12 @@ post_meta:
 # 主色调相关配置
 mainTone:
   enable: false # true or false 文章是否启用获取图片主色调
-  mode: api # cdn/api/both cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取，可以在文章内配置main_color: '#3e5658'，使用十六进制颜色，则不会请求both/cdn/api获取主色调，而是直接使用配置的颜色
+  mode: api # colorthief/cdn/api/both colorthief模式为前端获取图片主色调，cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取，可以在文章内配置main_color: '#3e5658'，使用十六进制颜色，则不会请求colorthief/cdn/api/both获取主色调，而是直接使用配置的颜色
   # 项目地址：https://github.com/anzhiyu-c/img2color-go
   api: https://img2color-go.vercel.app/api?img= # mode为api时可填写
   cover_change: true # 整篇文章跟随cover修改主色调
 
 # wordcount (字数统计)
-# see https://blog.anheyu.com/posts/c27d.html#字数统计
 wordcount:
   enable: false
   post_wordcount: true
@@ -350,10 +348,10 @@ valine:
 # https://waline.js.org/
 waline:
   serverURL: # Waline server address url
-  bg: # waline background
+  bg: # Waline background
   pageview: false
-  meta: false # 归属地, 操作系统 前是否显示图标
-  imageUploader: true # 是否启用图片上传功能，默认开启，限制为 128kb 的 base64 图片
+  meta_css: false # 是否引入 waline-meta.css ,以便显示 meta图标
+  imageUploader: true # 配置为 > 换行后可自定义图片上传逻辑，示例: https://waline.js.org/cookbook/customize/upload-image.html#案例
   # 以下为可选配置，后续若有新增/修改配置参数可在此自行添加/修改
   option:
 
@@ -372,6 +370,21 @@ artalk:
   site:
   visitor: false
   option:
+
+# giscus
+# https://giscus.app/
+giscus:
+  repo: # GitHub repository name
+  repo_id: # GitHub repository id
+  category_id: # GitHub repository category id
+  theme:
+    light: light
+    dark: dark
+  option: # options
+    data-lang: zh-CN
+    data-mapping:
+    data-category:
+    data-input-position:
 
 # Chat Services
 # --------------------------------------
@@ -429,7 +442,7 @@ footer:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
         message: 博客框架为Hexo_v5.4.0 #徽标提示语
-      - link: https://blog.anheyu.com/
+      - link: https://hexo.anheyu.com/
         shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
         message: 本站使用AnZhiYu主题
       # - link: https://www.dogecloud.com/
@@ -1091,6 +1104,17 @@ LA:
   ck:
   LingQueMonitorID:
 
+# Umami 统计配置（关于页面访问统计卡片）
+# 文档: https://umami.is/docs/api
+umami:
+  enable: false
+  # Umami API 地址，如 https://analytics.example.com
+  apiHost:
+  # 网站 ID
+  websiteId:
+  # API Token（在 Umami 后台 Settings -> API Keys 中生成）
+  token:
+
 # 标签卖萌
 diytitle:
   enable: true
@@ -1118,6 +1142,9 @@ nav_music:
   server: netease
   volume: 0.7 # 默认音量
   all_playlist: https://y.qq.com/n/ryqq/playlist/8802438608
+
+# 路径为 /music 的音乐页面默认加载的歌单 1. nav_music 2. custom
+music_page_default: nav_music
 
 # 评论匿名邮箱
 visitorMail:
@@ -1207,7 +1234,7 @@ rightClickMenu:
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
   enable: true
-  img: https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png
+  img: https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png
 
 # 动效
 dynamicEffect:
@@ -1312,3 +1339,4 @@ CDN:
     # waterfall:
     # ali_iconfont_css:
     # accesskey_js:
+    # colorthief:

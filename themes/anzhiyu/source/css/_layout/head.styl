@@ -102,7 +102,7 @@
       animation-timeline: view();
     if hexo-config('mainTone.enable')
       background-color: var(--anzhiyu-bar-background)
-    else 
+    else
       background-color: transparent
 
     // #nav
@@ -127,13 +127,13 @@
     &:has(.blqbanner)
       height: 15rem
       img
-        border-radius: 0px 
+        border-radius: 0px
     &:has(.bili-banner)
       height: 11rem
       img
-        border-radius: 0px 
+        border-radius: 0px
 
-    #post-top-cover 
+    #post-top-cover
       width: 70%;
       height: 100%;
       position: relative;
@@ -219,7 +219,7 @@
           background: var(--anzhiyu-card-bg);
           outline: 1px solid var(--anzhiyu-card-border);
     if hexo-config('mainTone.enable')
-      &:before    
+      &:before
         position: absolute
         width: 100%
         height: 100%
@@ -274,7 +274,7 @@
       background: var(--anzhiyu-main);
     #travellings_button::after
       background: var(--anzhiyu-main) !important;
-    #nav 
+    #nav
       #blog_name .back-home-button,
       #blog_name #site-name,
       #nav-right .nav-button a,
@@ -339,7 +339,7 @@
           max-width: 35.5rem
         +minWidth2000()
           max-width: 45.5rem
-    #nav 
+    #nav
       #menus
         z-index: 100;
         div.menus_items
@@ -350,12 +350,12 @@
           // top: -60px;
           transform: translateY(-60px)
           will-change: transform
-  &.nav-fixed.nav-visible 
+  &.nav-fixed.nav-visible
     #page-name
       z-index: 100;
       top: 60px;
       transition: 0.3s;
-    #nav 
+    #nav
       #menus
         div.menus_items
           opacity: 1;
@@ -457,7 +457,7 @@
           font-weight: 500;
           text-decoration: none;
           padding: 0 0.2em;
-          &:hover 
+          &:hover
             color: var(--anzhiyu-white);
             background-color: var(--anzhiyu-main);
             border-radius: 4px;
@@ -693,7 +693,7 @@ if hexo-config('dynamicEffect') && hexo-config('dynamicEffect.postTopWave')
     fill: #f7f9fe
 
   //黑色模式背景
-  [data-theme="dark"] .parallax 
+  [data-theme="dark"] .parallax
     & > use:nth-child(1)
       fill: #18171dc8
     & > use:nth-child(2)
@@ -731,7 +731,7 @@ if hexo-config('dynamicEffect') && hexo-config('dynamicEffect.postTopWave')
       display: flex;
     span.post-meta-categories
       color: var(--anzhiyu-white);
-      
+
       font-size: 0.9rem;
       margin: auto;
       font-weight: bold;
@@ -740,7 +740,7 @@ if hexo-config('dynamicEffect') && hexo-config('dynamicEffect.postTopWave')
       width: 100%;
       height: 100%;
       display: flex;
-      i 
+      i
        display: none
 
       a.post-meta-categories
@@ -762,15 +762,17 @@ if hexo-config('dynamicEffect') && hexo-config('dynamicEffect.postTopWave')
       color: var(--anzhiyu-white);
       opacity: 0.8;
       margin-right: 8px;
-    .anzhiyu-icon-hashtag:before 
+    .anzhiyu-icon-hashtag:before
       font-size: 17px;
     .anzhiyu-icon-location-dot
       margin-right: 4px
 #post
   #post-info
     #post-firstinfo
-      .meta-firstline 
+      .meta-firstline
         a.post-meta-original
+          background: var(--anzhiyu-black)
+        a.post-meta-categories
           background: var(--anzhiyu-black)
         .article-meta__tags
           color: var(--anzhiyu-black)
