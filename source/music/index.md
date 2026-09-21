@@ -3,8 +3,8 @@ title: 音乐馆
 date: 2024-05-08 10:30:52
 updated: 2026-09-21 21:00:00
 description: 一份用于阅读和工作时播放的个人歌单。
-type: music
-aplayer: true
+type: page
+aplayer: false
 top_img: false
 comments: false
 aside: false

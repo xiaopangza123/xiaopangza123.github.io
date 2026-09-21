@@ -1013,9 +1013,9 @@ umami:
 
 # 标签卖萌
 diytitle:
-  enable: true
-  leaveTitle: w(ﾟДﾟ)w 不要走！再看看嘛！
-  backTitle: ♪(^∇^*)欢迎肥来！
+  enable: false
+  leaveTitle: 页面已离开
+  backTitle: 欢迎回来
 
 # 留言弹幕配置
 comment_barrage_config:
@@ -1039,8 +1039,8 @@ nav_music:
   volume: 0.7 # 默认音量
   all_playlist: https://y.qq.com/n/ryqq/playlist/7390449984
 
-# 音乐页默认播放器来源：nav_music / local
-music_page_default: nav_music
+# 音乐页使用本地 JSON；当前歌单为空时显示页面维护说明。
+music_page_default: custom
 
 # 评论匿名邮箱
 visitorMail:
@@ -1125,7 +1125,7 @@ agreementPopup:
 
 # 右键菜单
 rightClickMenu:
-  enable: true
+  enable: false
 
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
