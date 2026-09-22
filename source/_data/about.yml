@@ -1,6 +1,6 @@
 - class_name: 关于页
   subtitle: 把真实实践整理成可以复用的技术记录
-  avatarImg: /favicon.ico
+  avatarImg: https://blog.xiaopangza.cn/img/siteicon/32.png
   avatarSkills:
     left:
       - 🤖 AI 智能体实践

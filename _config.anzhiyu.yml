@@ -129,11 +129,11 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /favicon.ico
+favicon: https://blog.xiaopangza.cn/favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://blog.xiaopangza.cn/favicon.ico
+  img: https://blog.xiaopangza.cn/img/siteicon/32.png
   effect: false
 
 # Disable all banner image
