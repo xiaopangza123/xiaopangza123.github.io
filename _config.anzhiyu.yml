@@ -133,7 +133,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /favicon.ico
+  img: https://blog.xiaopangza.cn/favicon.ico
   effect: false
 
 # Disable all banner image
@@ -1132,8 +1132,8 @@ comment_barrage_config:
 nav_music:
   enable: true
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
-  id: 8152976493
-  server: netease
+  id: 60198
+  server: tencent
   volume: 0.7 # 默认音量
   all_playlist: https://y.qq.com/n/ryqq/playlist/8802438608
 
