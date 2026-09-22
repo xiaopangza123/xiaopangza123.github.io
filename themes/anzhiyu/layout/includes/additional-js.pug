@@ -33,7 +33,7 @@ div
   //- 控制台打印信息
   if theme.console.enable
     != partial("includes/anzhiyu/log-js.pug", {}, { cache: true })
-
+  
   //- 随机文章
   script(async src="/anzhiyu/random.js")
 
@@ -73,7 +73,7 @@ div
 
     if commentsJsLoad
       include ./third-party/comments/js.pug
-
+    
     input(type="hidden" name="page-type" id="page-type" value=(page.type ? page.type : (is_post() ? "post" : (is_category() ? "categories" : "anzhiyu"))))
 
     //- 评论弹幕
