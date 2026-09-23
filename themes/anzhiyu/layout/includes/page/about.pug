@@ -141,18 +141,19 @@ if site.data.about
               span.selfInfo-content(style='color:#b04fe6')=selfInfoContent3
       
       .author-content
-        .author-content-item.personalities
-          - let {author_name, personality_type, photo_url, personality_img, name_url, personality_type_color} = item.personalities
-          .author-content-item-tips=_p('about.personality')
-          span.author-content-item-title= author_name
-          .title2(style=`color:${personality_type_color ? personality_type_color : "#ac899c"}`)= personality_type
-          .post-tips
-            - const learnMoreText = _p('about.learn_more_at', '<a href="https://www.16personalities.com/" target="_blank" rel="noopener nofollow">16personalities</a>', '<a target="_blank" rel="noopener external nofollow" href="' + name_url + '">' + author_name + '</a>')
-            != learnMoreText
-          .image
-            img.no-lightbox(src=url_for(personality_img), alt=_p('about.personality_img_alt'))
-        .author-content-item.myphoto
-          img.author-content-img.no-lightbox(alt=_p('about.selfie_alt'), src=url_for(photo_url))
+        if item.personalities && item.personalities.enable !== false
+          .author-content-item.personalities
+            - let {author_name, personality_type, photo_url, personality_img, name_url, personality_type_color} = item.personalities
+            .author-content-item-tips=_p('about.personality')
+            span.author-content-item-title= author_name
+            .title2(style=`color:${personality_type_color ? personality_type_color : "#ac899c"}`)= personality_type
+            .post-tips
+              - const learnMoreText = _p('about.learn_more_at', '<a href="https://www.16personalities.com/" target="_blank" rel="noopener nofollow">16personalities</a>', '<a target="_blank" rel="noopener external nofollow" href="' + name_url + '">' + author_name + '</a>')
+              != learnMoreText
+            .image
+              img.no-lightbox(src=url_for(personality_img), alt=_p('about.personality_img_alt'))
+          .author-content-item.myphoto
+            img.author-content-img.no-lightbox(alt=_p('about.selfie_alt'), src=url_for(photo_url))
       
       .author-content
         .author-content-item.maxim
