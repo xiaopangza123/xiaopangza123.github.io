@@ -133,7 +133,7 @@ favicon: https://blog.xiaopangza.cn/favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://blog.xiaopangza.cn/img/siteicon/32.png
+  img: /img/avatar/author.png
   effect: false
 
 # Disable all banner image
